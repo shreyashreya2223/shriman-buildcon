@@ -65,7 +65,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Shriman Buildcon",
               url: "https://shrimanbuildcon.com",
-              logo: "https://shrimanbuildcon.com/icon.png",
+              logo: "https://shrimanbuildcon.com/logo.png",
               description:
                 "Professional construction, waterproofing, tile and stone fixing, renovation and finishing services.",
             }),
