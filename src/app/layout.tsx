@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Shriman Buildcon",
   description:
     "Professional construction, turnkey projects, waterproofing, tile and stone fixing, renovation and finishing services.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -26,6 +29,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Shriman Buildcon",
+              url: "https://shrimanbuildcon.com",
+              logo: "https://shrimanbuildcon.com/icon.png",
+              description:
+                "Professional construction, turnkey projects, waterproofing, tile and stone fixing, renovation and finishing services.",
+            }),
+          }}
+        />
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
