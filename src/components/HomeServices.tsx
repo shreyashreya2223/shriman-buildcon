@@ -58,143 +58,509 @@ export default function HomeServices() {
   return (
     <section
       id="home-services"
-      className="relative overflow-hidden bg-white py-24 lg:py-28"
+      className="relative overflow-hidden bg-white py-12 sm:py-20 lg:py-28"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        {/* Heading */}
+        {/* ========================================================= */}
+        {/* HEADING */}
+        {/* ========================================================= */}
+
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7 }}
-          className="mb-14 flex flex-col items-center text-center"
+          transition={{ duration: 0.6 }}
+          className="mb-7 flex flex-col items-center text-center sm:mb-12 lg:mb-14"
         >
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-[2px] w-12 bg-[#F4B400]" />
+          <div className="mb-3 flex items-center gap-2.5 sm:mb-5 sm:gap-3">
+            <span className="h-[2px] w-7 bg-[#F4B400] sm:w-12" />
 
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#114FA7]">
+            <span className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#114FA7] sm:text-xs sm:tracking-[0.3em]">
               What We Do
             </span>
 
-            <span className="h-[2px] w-12 bg-[#F4B400]" />
+            <span className="h-[2px] w-7 bg-[#F4B400] sm:w-12" />
           </div>
 
-          <h2 className="text-4xl font-extrabold tracking-tight text-[#0E2748] sm:text-5xl lg:text-6xl">
+          <h2 className="max-w-3xl text-[27px] font-extrabold leading-[1.08] tracking-tight text-[#0E2748] sm:text-4xl lg:text-6xl">
             Five Core Services.
             <span className="block text-[#114FA7]">
               One Reliable Partner.
             </span>
           </h2>
 
-          <p className="mt-5 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg">
+          <p className="mt-3 max-w-2xl text-[12px] leading-5 text-slate-500 sm:mt-5 sm:text-base sm:leading-7 lg:text-lg">
             From construction and project execution to protection,
             installation, renovation, and finishing, we support every
             essential stage of your project.
           </p>
         </motion.div>
 
-        {/* Cards */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* ========================================================= */}
+        {/* SERVICE CARDS */}
+        {/* ========================================================= */}
 
+        <div
+          className="
+            grid
+            grid-cols-2
+            gap-2.5
+            sm:grid-cols-1
+            sm:gap-5
+            md:grid-cols-2
+            lg:grid-cols-3
+            lg:gap-6
+          "
+        >
           {services.map((service, index) => {
             const Icon = service.icon;
+
+            const isMiddleCard = service.number === "03";
 
             return (
               <motion.div
                 key={service.number}
-                initial={{ opacity: 0, y: 35 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{
-                  duration: 0.6,
-                  delay: index * 0.08,
+                  duration: 0.5,
+                  delay: index * 0.05,
                 }}
-                className="group"
+                className={`group ${
+                  isMiddleCard
+                    ? "col-span-2 sm:col-span-1 md:col-span-1"
+                    : ""
+                }`}
               >
                 <Link
                   href={service.href}
-                  className="relative flex h-full min-h-[390px] flex-col overflow-hidden border border-slate-200 bg-white p-7 shadow-[0_10px_35px_rgba(14,39,72,0.07)] transition-all duration-500 hover:-translate-y-2 hover:border-[#114FA7]/30 hover:shadow-[0_25px_60px_rgba(14,39,72,0.15)]"
+                  className={`
+                    relative
+                    flex
+                    h-full
+                    overflow-hidden
+                    border
+                    border-slate-200
+                    bg-white
+                    shadow-[0_6px_20px_rgba(14,39,72,0.05)]
+                    transition-all
+                    duration-500
+                    hover:-translate-y-1
+                    hover:border-[#114FA7]/30
+                    hover:shadow-[0_20px_45px_rgba(14,39,72,0.12)]
+
+                    ${
+                      isMiddleCard
+                        ? `
+                          flex-row
+                          items-center
+                          gap-4
+                          p-4
+                          min-h-[145px]
+                          sm:min-h-0
+                          sm:flex-col
+                          sm:items-stretch
+                          sm:gap-0
+                          sm:p-6
+                          lg:min-h-[390px]
+                          lg:flex-col
+                          lg:p-7
+                        `
+                        : `
+                          min-h-[225px]
+                          flex-col
+                          p-3.5
+                          sm:min-h-[330px]
+                          sm:p-6
+                          lg:min-h-[390px]
+                          lg:p-7
+                        `
+                    }
+                  `}
                 >
 
                   {/* Gold top animation */}
                   <div className="absolute left-0 top-0 h-[3px] w-0 bg-[#F4B400] transition-all duration-500 group-hover:w-full" />
 
-                  {/* Large number */}
-                  <span className="pointer-events-none absolute right-5 top-3 select-none text-[90px] font-black leading-none text-[#0E2748]/[0.035] transition-all duration-500 group-hover:text-[#114FA7]/[0.07]">
+                  {/* Background number */}
+                  <span
+                    className={`
+                      pointer-events-none
+                      absolute
+                      select-none
+                      font-black
+                      leading-none
+                      text-[#0E2748]/[0.035]
+                      transition-all
+                      duration-500
+                      group-hover:text-[#114FA7]/[0.07]
+
+                      ${
+                        isMiddleCard
+                          ? `
+                            right-3
+                            top-2
+                            text-[58px]
+                            sm:right-5
+                            sm:top-3
+                            sm:text-[80px]
+                            lg:text-[90px]
+                          `
+                          : `
+                            right-2
+                            top-1
+                            text-[52px]
+                            sm:right-5
+                            sm:top-3
+                            sm:text-[80px]
+                            lg:text-[90px]
+                          `
+                      }
+                    `}
+                  >
                     {service.number}
                   </span>
 
-                  {/* Icon */}
-                  <div className="relative z-10 flex h-14 w-14 items-center justify-center border border-[#114FA7]/20 bg-[#F5F8FC] text-[#114FA7] transition-all duration-500 group-hover:border-[#114FA7] group-hover:bg-[#114FA7] group-hover:text-white group-hover:shadow-lg">
-                    <Icon
-                      size={25}
-                      strokeWidth={1.8}
-                    />
-                  </div>
+                  {/* ================================================= */}
+                  {/* MOBILE MIDDLE CARD */}
+                  {/* ================================================= */}
 
-                  {/* Service number */}
-                  <p className="relative z-10 mt-8 text-xs font-bold uppercase tracking-[0.28em] text-[#114FA7]">
-                    Service {service.number}
-                  </p>
+                  {isMiddleCard ? (
+                    <>
+                      {/* Icon */}
+                      <div
+                        className="
+                          relative
+                          z-10
+                          flex
+                          h-11
+                          w-11
+                          shrink-0
+                          items-center
+                          justify-center
+                          border
+                          border-[#114FA7]/20
+                          bg-[#F5F8FC]
+                          text-[#114FA7]
+                          transition-all
+                          duration-500
+                          group-hover:border-[#114FA7]
+                          group-hover:bg-[#114FA7]
+                          group-hover:text-white
+                          group-hover:shadow-lg
 
-                  {/* Title */}
-                  <h3 className="relative z-10 mt-3 text-2xl font-extrabold leading-tight tracking-tight text-[#0E2748] transition-colors duration-300 group-hover:text-[#114FA7]">
-                    {service.title}
-                  </h3>
+                          sm:h-14
+                          sm:w-14
+                        "
+                      >
+                        <Icon
+                          size={21}
+                          strokeWidth={1.8}
+                          className="sm:h-[25px] sm:w-[25px]"
+                        />
+                      </div>
 
-                  {/* Gold divider */}
-                  <div className="mt-5 h-[3px] w-10 bg-[#F4B400] transition-all duration-500 group-hover:w-20" />
+                      {/* Content */}
+                      <div className="relative z-10 min-w-0 flex-1">
 
-                  {/* Description */}
-                  <p className="mt-5 text-sm leading-7 text-slate-500">
-                    {service.description}
-                  </p>
+                        {/* Mobile number */}
+                        <span className="block text-[9px] font-bold uppercase tracking-[0.2em] text-[#114FA7] sm:hidden">
+                          Service {service.number}
+                        </span>
 
-                  {/* Bottom CTA */}
-                  <div className="mt-auto flex items-center justify-between pt-8">
+                        {/* Desktop number */}
+                        <p className="mt-7 hidden text-xs font-bold uppercase tracking-[0.28em] text-[#114FA7] sm:block">
+                          Service {service.number}
+                        </p>
 
-                    <span className="text-sm font-bold text-[#114FA7]">
-                      Explore Service
-                    </span>
+                        {/* Title */}
+                        <h3
+                          className="
+                            mt-1
+                            max-w-full
+                            text-[15px]
+                            font-extrabold
+                            leading-tight
+                            tracking-tight
+                            text-[#0E2748]
+                            transition-colors
+                            duration-300
+                            group-hover:text-[#114FA7]
 
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#114FA7]/20 bg-[#F5F8FC] text-[#114FA7] transition-all duration-300 group-hover:bg-[#114FA7] group-hover:text-white group-hover:shadow-md">
-                      <ArrowRight
-                        size={18}
-                        className="transition-transform duration-300 group-hover:translate-x-1"
-                      />
-                    </span>
+                            sm:mt-3
+                            sm:text-2xl
+                          "
+                        >
+                          {service.title}
+                        </h3>
 
-                  </div>
+                        {/* Divider */}
+                        <div className="mt-2 h-[3px] w-8 bg-[#F4B400] transition-all duration-500 group-hover:w-14 sm:mt-5 sm:w-10 sm:group-hover:w-20" />
 
+                        {/* Description */}
+                        <p
+                          className="
+                            mt-2
+                            line-clamp-2
+                            text-[10.5px]
+                            leading-[1.45]
+                            text-slate-500
+
+                            sm:mt-5
+                            sm:line-clamp-none
+                            sm:text-sm
+                            sm:leading-7
+                          "
+                        >
+                          {service.description}
+                        </p>
+
+                        {/* CTA */}
+                        <div
+                          className="
+                            mt-2
+                            flex
+                            items-center
+                            justify-between
+
+                            sm:mt-auto
+                            sm:border-0
+                            sm:pt-8
+                          "
+                        >
+                          <span className="text-[10px] font-bold text-[#114FA7] sm:text-sm">
+                            Explore Service
+                          </span>
+
+                          <span
+                            className="
+                              flex
+                              h-7
+                              w-7
+                              shrink-0
+                              items-center
+                              justify-center
+                              rounded-full
+                              border
+                              border-[#114FA7]/20
+                              bg-[#F5F8FC]
+                              text-[#114FA7]
+                              transition-all
+                              duration-300
+                              group-hover:bg-[#114FA7]
+                              group-hover:text-white
+                              group-hover:shadow-md
+
+                              sm:h-10
+                              sm:w-10
+                            "
+                          >
+                            <ArrowRight
+                              size={14}
+                              className="transition-transform duration-300 group-hover:translate-x-1 sm:h-[18px] sm:w-[18px]"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      {/* ================================================= */}
+                      {/* NORMAL CARDS */}
+                      {/* ================================================= */}
+
+                      {/* Top row */}
+                      <div className="relative z-10 flex items-center justify-between">
+
+                        {/* Icon */}
+                        <div
+                          className="
+                            flex
+                            h-9
+                            w-9
+                            shrink-0
+                            items-center
+                            justify-center
+                            border
+                            border-[#114FA7]/20
+                            bg-[#F5F8FC]
+                            text-[#114FA7]
+                            transition-all
+                            duration-500
+                            group-hover:border-[#114FA7]
+                            group-hover:bg-[#114FA7]
+                            group-hover:text-white
+                            group-hover:shadow-lg
+
+                            sm:h-14
+                            sm:w-14
+                          "
+                        >
+                          <Icon
+                            size={18}
+                            strokeWidth={1.8}
+                            className="sm:h-[25px] sm:w-[25px]"
+                          />
+                        </div>
+
+                        {/* Mobile service number */}
+                        <span className="text-[8px] font-bold uppercase tracking-[0.18em] text-[#114FA7] sm:hidden">
+                          Service {service.number}
+                        </span>
+                      </div>
+
+                      {/* Desktop service number */}
+                      <p className="relative z-10 mt-7 hidden text-xs font-bold uppercase tracking-[0.28em] text-[#114FA7] sm:block">
+                        Service {service.number}
+                      </p>
+
+                      {/* Title */}
+                      <h3
+                        className="
+                          relative
+                          z-10
+                          mt-3
+                          max-w-[96%]
+                          text-[14px]
+                          font-extrabold
+                          leading-[1.15]
+                          tracking-tight
+                          text-[#0E2748]
+                          transition-colors
+                          duration-300
+                          group-hover:text-[#114FA7]
+
+                          sm:mt-3
+                          sm:text-2xl
+                        "
+                      >
+                        {service.title}
+                      </h3>
+
+                      {/* Gold divider */}
+                      <div className="mt-2 h-[3px] w-8 bg-[#F4B400] transition-all duration-500 group-hover:w-14 sm:mt-5 sm:w-10 sm:group-hover:w-20" />
+
+                      {/* Description */}
+                      <p
+                        className="
+                          mt-2
+                          line-clamp-3
+                          text-[10.5px]
+                          leading-[1.45]
+                          text-slate-500
+
+                          sm:mt-5
+                          sm:line-clamp-none
+                          sm:text-sm
+                          sm:leading-7
+                        "
+                      >
+                        {service.description}
+                      </p>
+
+                      {/* CTA */}
+                      <div
+                        className="
+                          mt-auto
+                          flex
+                          items-center
+                          justify-between
+                          border-t
+                          border-slate-100
+                          pt-2.5
+
+                          sm:border-0
+                          sm:pt-8
+                        "
+                      >
+                        <span className="text-[10px] font-bold text-[#114FA7] sm:text-sm">
+                          Explore Service
+                        </span>
+
+                        <span
+                          className="
+                            flex
+                            h-7
+                            w-7
+                            shrink-0
+                            items-center
+                            justify-center
+                            rounded-full
+                            border
+                            border-[#114FA7]/20
+                            bg-[#F5F8FC]
+                            text-[#114FA7]
+                            transition-all
+                            duration-300
+                            group-hover:bg-[#114FA7]
+                            group-hover:text-white
+                            group-hover:shadow-md
+
+                            sm:h-10
+                            sm:w-10
+                          "
+                        >
+                          <ArrowRight
+                            size={14}
+                            className="transition-transform duration-300 group-hover:translate-x-1 sm:h-[18px] sm:w-[18px]"
+                          />
+                        </span>
+                      </div>
+                    </>
+                  )}
                 </Link>
               </motion.div>
             );
           })}
-
         </div>
 
-        {/* View all services */}
+        {/* ========================================================= */}
+        {/* VIEW ALL SERVICES */}
+        {/* ========================================================= */}
+
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-12 flex justify-center"
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mt-7 flex justify-center sm:mt-10 lg:mt-12"
         >
           <Link
             href="/services"
-            className="group inline-flex items-center gap-3 bg-[#114FA7] px-7 py-4 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#0E2748] hover:shadow-xl"
+            className="
+              group
+              inline-flex
+              items-center
+              gap-2
+              bg-[#114FA7]
+              px-5
+              py-3
+              text-xs
+              font-bold
+              text-white
+              shadow-lg
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:bg-[#0E2748]
+              hover:shadow-xl
+
+              sm:gap-3
+              sm:px-7
+              sm:py-4
+              sm:text-sm
+            "
           >
             View All Services
 
             <ArrowRight
-              size={18}
-              className="transition-transform duration-300 group-hover:translate-x-1"
+              size={15}
+              className="transition-transform duration-300 group-hover:translate-x-1 sm:h-[18px] sm:w-[18px]"
             />
           </Link>
         </motion.div>
-
       </div>
     </section>
   );

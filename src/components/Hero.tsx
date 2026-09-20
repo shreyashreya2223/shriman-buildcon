@@ -60,7 +60,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#0E2748] pt-20">
+    <section className="relative min-h-0 overflow-hidden bg-[#0E2748] pt-16 lg:min-h-screen lg:pt-20">
 
       {/* ========================================================= */}
       {/* BACKGROUND IMAGE SLIDESHOW */}
@@ -135,8 +135,15 @@ export default function Hero() {
       {/* MAIN CONTENT */}
       {/* ========================================================= */}
 
-      <div className="relative mx-auto flex min-h-[calc(100vh-80px)] max-w-7xl items-center px-6 pb-44 pt-24 sm:px-8 lg:px-10 lg:pb-48">
-        <div className="max-w-4xl">
+      <div
+        className="
+          relative mx-auto flex min-h-0 max-w-7xl items-center
+          px-5 pb-10 pt-12
+          sm:px-8
+          lg:min-h-[calc(100vh-80px)] lg:px-10 lg:pb-44 lg:pt-24
+        "
+      >
+        <div className="w-full max-w-4xl">
 
           {/* Small Brand Label */}
           <motion.div
@@ -144,11 +151,11 @@ export default function Hero() {
             animate="visible"
             variants={fadeUp}
             transition={{ delay: 0.1 }}
-            className="mb-6 flex items-center gap-3"
+            className="mb-5 flex items-center gap-3 sm:mb-6"
           >
-            <span className="h-[2px] w-12 bg-[#F4B400] sm:w-14" />
+            <span className="h-[2px] w-9 bg-[#F4B400] sm:w-14" />
 
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#F4B400] sm:text-sm sm:tracking-[0.35em]">
+            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#F4B400] sm:text-sm sm:tracking-[0.35em]">
               Shriman Buildcon
             </span>
           </motion.div>
@@ -159,11 +166,22 @@ export default function Hero() {
             animate="visible"
             variants={fadeUp}
             transition={{ delay: 0.2 }}
-            className="max-w-5xl text-[46px] font-extrabold leading-[1.02] tracking-[-0.03em] text-white sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[82px]"
+            className="
+              max-w-5xl
+              text-[38px]
+              font-extrabold
+              leading-[1.02]
+              tracking-[-0.035em]
+              text-white
+              sm:text-6xl
+              md:text-7xl
+              lg:text-[76px]
+              xl:text-[82px]
+            "
           >
             Building Excellence
 
-            <span className="mt-3 block text-[#F4B400]">
+            <span className="mt-2 block text-[#F4B400] sm:mt-3">
               From Foundation to Finish
             </span>
           </motion.h1>
@@ -174,7 +192,17 @@ export default function Hero() {
             animate="visible"
             variants={fadeUp}
             transition={{ delay: 0.35 }}
-            className="mt-7 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8 lg:text-xl"
+            className="
+              mt-5
+              max-w-2xl
+              text-[15px]
+              leading-6
+              text-white/85
+              sm:mt-7
+              sm:text-lg
+              sm:leading-8
+              lg:text-xl
+            "
           >
             Delivering reliable civil construction, turnkey projects,
             waterproofing, renovation, and finishing solutions with
@@ -190,13 +218,37 @@ export default function Hero() {
             animate="visible"
             variants={fadeUp}
             transition={{ delay: 0.5 }}
-            className="mt-9 flex flex-col gap-4 sm:flex-row"
+            className="
+              mt-7
+              flex
+              flex-col
+              gap-3
+              sm:mt-9
+              sm:flex-row
+              sm:gap-4
+            "
           >
 
             {/* Primary CTA */}
             <Link
               href="/contact"
-              className="group relative inline-flex items-center justify-center gap-3 overflow-hidden bg-[#114FA7] px-7 py-4 font-semibold text-white shadow-[0_10px_30px_rgba(17,79,167,0.30)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#F4B400] hover:text-[#0E2748] hover:shadow-[0_15px_35px_rgba(244,180,0,0.25)]"
+              className="
+                group relative inline-flex
+                w-full items-center justify-center gap-3
+                overflow-hidden
+                bg-[#114FA7]
+                px-6 py-3.5
+                text-sm font-semibold
+                text-white
+                shadow-[0_10px_30px_rgba(17,79,167,0.30)]
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:bg-[#F4B400]
+                hover:text-[#0E2748]
+                hover:shadow-[0_15px_35px_rgba(244,180,0,0.25)]
+                sm:w-auto
+                sm:px-7 sm:py-4
+              "
             >
               {/* Shine effect */}
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
@@ -214,7 +266,23 @@ export default function Hero() {
             {/* Secondary CTA */}
             <Link
               href="/projects"
-              className="group inline-flex items-center justify-center gap-3 border border-white/35 bg-white/[0.07] px-7 py-4 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-[#0E2748]"
+              className="
+                group inline-flex
+                w-full items-center justify-center gap-3
+                border border-white/35
+                bg-white/[0.07]
+                px-6 py-3.5
+                text-sm font-semibold
+                text-white
+                backdrop-blur-md
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:border-white
+                hover:bg-white
+                hover:text-[#0E2748]
+                sm:w-auto
+                sm:px-7 sm:py-4
+              "
             >
               <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/40 transition-colors duration-300 group-hover:border-[#0E2748]/30">
                 <Play
@@ -234,9 +302,21 @@ export default function Hero() {
             animate="visible"
             variants={fadeUp}
             transition={{ delay: 0.65 }}
-            className="mt-7 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-white/55"
+            className="
+              mt-5
+              flex items-center gap-3
+              text-[9px]
+              font-medium
+              uppercase
+              tracking-[0.14em]
+              text-white/55
+              sm:mt-7
+              sm:text-xs
+              sm:tracking-[0.18em]
+            "
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-[#F4B400]" />
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#F4B400]" />
+
             Quality • Precision • Reliability
           </motion.div>
         </div>
@@ -299,7 +379,6 @@ export default function Hero() {
           >
             <ChevronRight size={15} />
           </button>
-
         </div>
       </div>
 
@@ -324,32 +403,58 @@ export default function Hero() {
           duration: shouldReduceMotion ? 0 : 0.8,
           delay: shouldReduceMotion ? 0 : 0.7,
         }}
-        className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-[#0E2748]/80 backdrop-blur-xl"
+        className="
+          relative
+          left-auto
+          right-auto
+          bottom-auto
+          border-t
+          border-white/10
+          bg-[#0E2748]/90
+          backdrop-blur-xl
+          lg:absolute
+          lg:bottom-0
+          lg:left-0
+          lg:right-0
+          lg:bg-[#0E2748]/80
+        "
       >
         <div className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`group relative px-4 py-5 text-center transition-all duration-300 hover:bg-white/[0.04] sm:px-6 sm:py-6 ${
-                index !== 0 ? "border-l border-white/10" : ""
-              } ${
-                index === 2
-                  ? "border-t border-white/10 md:border-t-0"
-                  : ""
-              } ${
-                index === 3
-                  ? "border-t border-white/10 md:border-t-0"
-                  : ""
-              }`}
+              className={`
+                group relative
+                px-3 py-4
+                text-center
+                transition-all duration-300
+                hover:bg-white/[0.04]
+                sm:px-6 sm:py-6
+                ${
+                  index !== 0
+                    ? "border-l border-white/10"
+                    : ""
+                }
+                ${
+                  index === 2
+                    ? "border-t border-white/10 md:border-t-0"
+                    : ""
+                }
+                ${
+                  index === 3
+                    ? "border-t border-white/10 md:border-t-0"
+                    : ""
+                }
+              `}
             >
               {/* Yellow hover indicator */}
               <span className="absolute left-1/2 top-0 h-[2px] w-0 -translate-x-1/2 bg-[#F4B400] transition-all duration-300 group-hover:w-12" />
 
-              <p className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              <p className="text-xl font-bold tracking-tight text-white sm:text-3xl">
                 {stat.value}
               </p>
 
-              <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.18em] text-white/55 sm:text-xs">
+              <p className="mt-1 text-[8px] font-medium uppercase tracking-[0.14em] text-white/55 sm:text-xs sm:tracking-[0.18em]">
                 {stat.label}
               </p>
             </div>

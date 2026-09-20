@@ -183,9 +183,9 @@ export default function AboutPage() {
             className="pointer-events-none absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full bg-[#F4B400] blur-3xl"
           />
 
-          <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+          <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-28">
 
-            <div className="grid items-center gap-14 lg:grid-cols-[1fr_0.95fr] lg:gap-20">
+            <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.95fr] lg:gap-20">
 
               {/* LEFT CONTENT */}
               <motion.div
@@ -198,16 +198,16 @@ export default function AboutPage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.15 }}
-                  className="mb-6 flex items-center gap-3"
+                  className="mb-5 flex items-center gap-3"
                 >
-                  <span className="h-[2px] w-12 bg-[#F4B400]" />
+                  <span className="h-[2px] w-10 bg-[#F4B400] sm:w-12" />
 
-                  <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#114FA7] sm:text-sm">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#114FA7] sm:text-sm sm:tracking-[0.3em]">
                     About Shriman Buildcon
                   </span>
                 </motion.div>
 
-                <h1 className="max-w-3xl text-5xl font-extrabold leading-[1.02] tracking-tight text-[#0E2748] sm:text-6xl lg:text-[70px]">
+                <h1 className="max-w-3xl text-4xl font-extrabold leading-[1.02] tracking-tight text-[#0E2748] sm:text-6xl lg:text-[70px]">
                   From Foundation
                   <span className="block text-[#114FA7]">
                     to Finish.
@@ -218,17 +218,17 @@ export default function AboutPage() {
                   initial={{ width: 0 }}
                   animate={{ width: 80 }}
                   transition={{ duration: 0.7, delay: 0.5 }}
-                  className="mt-7 h-1 bg-[#F4B400]"
+                  className="mt-6 h-1 bg-[#F4B400]"
                 />
 
-                <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600">
+                <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
                   Shriman Buildcon is a trusted construction and turnkey
                   project firm committed to delivering high-quality
                   construction solutions with professionalism, precision,
                   and integrity.
                 </p>
 
-                <p className="mt-5 max-w-2xl text-base leading-7 text-slate-500">
+                <p className="mt-4 max-w-2xl text-sm leading-6 text-slate-500 sm:mt-5 sm:text-base sm:leading-7">
                   We specialize in residential, commercial, and industrial
                   projects while maintaining strong standards of quality,
                   safety, and timely delivery.
@@ -238,12 +238,12 @@ export default function AboutPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
-                  className="mt-9 flex flex-wrap gap-4"
+                  className="mt-7 flex flex-wrap gap-3 sm:mt-9 sm:gap-4"
                 >
 
                   <Link
                     href="/contact"
-                    className="group relative inline-flex items-center gap-3 overflow-hidden bg-[#114FA7] px-7 py-4 text-sm font-bold text-white shadow-[0_12px_30px_rgba(17,79,167,0.20)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0E438F] hover:shadow-[0_18px_40px_rgba(17,79,167,0.28)]"
+                    className="group relative inline-flex items-center gap-2 overflow-hidden bg-[#114FA7] px-5 py-3.5 text-xs font-bold text-white shadow-[0_12px_30px_rgba(17,79,167,0.20)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0E438F] hover:shadow-[0_18px_40px_rgba(17,79,167,0.28)] sm:gap-3 sm:px-7 sm:py-4 sm:text-sm"
                   >
                     <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
 
@@ -252,19 +252,19 @@ export default function AboutPage() {
                     </span>
 
                     <ArrowRight
-                      size={17}
+                      size={16}
                       className="relative transition-transform duration-300 group-hover:translate-x-1"
                     />
                   </Link>
 
                   <Link
                     href="/projects"
-                    className="group inline-flex items-center gap-3 border border-slate-200 bg-white px-7 py-4 text-sm font-bold text-[#0E2748] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#114FA7]/20 hover:shadow-lg"
+                    className="group inline-flex items-center gap-2 border border-slate-200 bg-white px-5 py-3.5 text-xs font-bold text-[#0E2748] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#114FA7]/20 hover:shadow-lg sm:gap-3 sm:px-7 sm:py-4 sm:text-sm"
                   >
                     Explore Our Projects
 
                     <ArrowRight
-                      size={17}
+                      size={16}
                       className="transition-transform duration-300 group-hover:translate-x-1"
                     />
                   </Link>
@@ -287,7 +287,7 @@ export default function AboutPage() {
               >
 
                 {/* Gold corner */}
-                <div className="absolute -left-4 -top-4 z-20 h-24 w-24 border-l-[3px] border-t-[3px] border-[#F4B400] sm:-left-6 sm:-top-6" />
+                <div className="absolute -left-2 -top-2 z-20 h-16 w-16 border-l-[3px] border-t-[3px] border-[#F4B400] sm:-left-6 sm:-top-6 sm:h-24 sm:w-24" />
 
                 {/* Image */}
                 <div className="group relative overflow-hidden bg-[#0E2748] shadow-[0_25px_70px_rgba(14,39,72,0.18)]">
@@ -295,7 +295,7 @@ export default function AboutPage() {
                   <img
                     src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=85"
                     alt="Shriman Buildcon construction project"
-                    className="h-[420px] w-full object-cover transition-transform duration-1000 group-hover:scale-105 sm:h-[500px]"
+                    className="h-[280px] w-full object-cover transition-transform duration-1000 group-hover:scale-105 sm:h-[500px]"
                   />
 
                   {/* Improved overlay */}
@@ -305,8 +305,8 @@ export default function AboutPage() {
                   <div className="pointer-events-none absolute inset-0 -translate-x-full skew-x-[-15deg] bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
 
                   {/* Image information */}
-                  <div className="absolute bottom-0 left-0 right-0 p-7 sm:p-9">
-                    <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#F4B400]">
+                  <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-9">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#F4B400] sm:text-xs sm:tracking-[0.28em]">
                       Shriman Buildcon
                     </p>
                   </div>
@@ -322,7 +322,7 @@ export default function AboutPage() {
                     duration: 0.6,
                     delay: 0.9,
                   }}
-                  className="absolute -bottom-6 left-6 z-30 overflow-hidden bg-[#114FA7] px-6 py-5 text-white shadow-[0_18px_45px_rgba(17,79,167,0.30)] sm:left-8 sm:px-7"
+                  className="absolute -bottom-4 left-4 z-30 overflow-hidden bg-[#114FA7] px-4 py-3 text-white shadow-[0_18px_45px_rgba(17,79,167,0.30)] sm:-bottom-6 sm:left-8 sm:px-7 sm:py-5"
                 >
 
                   {/* Gold shine */}
@@ -339,15 +339,15 @@ export default function AboutPage() {
                     className="absolute inset-y-0 w-16 skew-x-[-20deg] bg-white/10"
                   />
 
-                  <div className="relative flex items-center gap-3">
-                    <span className="h-2 w-2 rounded-full bg-[#F4B400] shadow-[0_0_12px_rgba(244,180,0,0.7)]" />
+                  <div className="relative flex items-center gap-2 sm:gap-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#F4B400] shadow-[0_0_12px_rgba(244,180,0,0.7)] sm:h-2 sm:w-2" />
 
-                    <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#F4B400]">
+                    <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#F4B400] sm:text-[11px] sm:tracking-[0.22em]">
                       Our Approach
                     </p>
                   </div>
 
-                  <p className="relative mt-1 text-lg font-bold">
+                  <p className="relative mt-1 text-sm font-bold sm:text-lg">
                     Built Around You
                   </p>
 
@@ -355,11 +355,12 @@ export default function AboutPage() {
 
 
                 {/* Blue corner */}
-                <div className="absolute -bottom-5 -right-5 z-10 h-24 w-24 border-b-[3px] border-r-[3px] border-[#114FA7]" />
+                <div className="absolute -bottom-3 -right-3 z-10 h-16 w-16 border-b-[3px] border-r-[3px] border-[#114FA7] sm:-bottom-5 sm:-right-5 sm:h-24 sm:w-24" />
 
               </motion.div>
 
             </div>
+
           </div>
         </section>
 
@@ -368,11 +369,11 @@ export default function AboutPage() {
         {/* WHO WE ARE */}
         {/* ========================================================= */}
 
-        <section className="bg-white py-24 lg:py-32">
+        <section className="bg-white py-12 sm:py-20 lg:py-32">
 
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-            <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
+            <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
 
               {/* LEFT */}
               <motion.div
@@ -383,23 +384,23 @@ export default function AboutPage() {
               >
 
                 <div className="flex items-center gap-3">
-                  <span className="h-[2px] w-10 bg-[#F4B400]" />
+                  <span className="h-[2px] w-9 bg-[#F4B400] sm:w-10" />
 
-                  <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#114FA7]">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#114FA7] sm:text-xs sm:tracking-[0.3em]">
                     Who We Are
                   </span>
                 </div>
 
-                <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-[#0E2748] sm:text-5xl">
+                <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-[#0E2748] sm:text-5xl">
                   Building Trust
                   <span className="block text-[#114FA7]">
                     Through Every Project.
                   </span>
                 </h2>
 
-                <div className="mt-6 h-1 w-16 bg-[#F4B400]" />
+                <div className="mt-5 h-1 w-14 bg-[#F4B400]" />
 
-                <div className="mt-10 hidden border-l-2 border-[#F4B400] pl-5 lg:block">
+                <div className="mt-7 hidden border-l-2 border-[#F4B400] pl-5 lg:block">
                   <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#0E2748]">
                     Our Commitment
                   </p>
@@ -419,7 +420,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className="space-y-6 text-base leading-8 text-slate-600 sm:text-lg"
+                className="space-y-4 text-sm leading-6 text-slate-600 sm:space-y-6 sm:text-lg sm:leading-8"
               >
 
                 <p>
@@ -446,7 +447,7 @@ export default function AboutPage() {
 
 
                 {/* STATS */}
-                <div className="grid grid-cols-2 gap-3 pt-3 sm:grid-cols-4 sm:gap-4">
+                <div className="grid grid-cols-2 gap-2 pt-1 sm:grid-cols-4 sm:gap-4 sm:pt-3">
 
                   {stats.map((stat, index) => (
                     <motion.div
@@ -469,16 +470,16 @@ export default function AboutPage() {
                         duration: 0.55,
                         delay: index * 0.08,
                       }}
-                      className="group relative overflow-hidden border border-slate-200 bg-[#F8FAFC] px-4 py-5 shadow-[0_8px_25px_rgba(14,39,72,0.04)] transition-all duration-500 hover:-translate-y-2 hover:border-[#114FA7]/20 hover:bg-white hover:shadow-[0_18px_40px_rgba(14,39,72,0.10)]"
+                      className="group relative overflow-hidden border border-slate-200 bg-[#F8FAFC] px-3 py-4 shadow-[0_8px_25px_rgba(14,39,72,0.04)] transition-all duration-500 hover:-translate-y-2 hover:border-[#114FA7]/20 hover:bg-white hover:shadow-[0_18px_40px_rgba(14,39,72,0.10)] sm:px-4 sm:py-5"
                     >
 
                       <div className="absolute left-0 top-0 h-[2px] w-0 bg-[#F4B400] transition-all duration-500 group-hover:w-full" />
 
-                      <p className="text-2xl font-extrabold tracking-tight text-[#114FA7] sm:text-3xl">
+                      <p className="text-xl font-extrabold tracking-tight text-[#114FA7] sm:text-3xl">
                         {stat.value}
                       </p>
 
-                      <p className="mt-1 text-[10px] font-bold uppercase leading-4 tracking-[0.12em] text-slate-400">
+                      <p className="mt-1 text-[8px] font-bold uppercase leading-4 tracking-[0.1em] text-slate-400 sm:text-[10px] sm:tracking-[0.12em]">
                         {stat.label}
                       </p>
 
@@ -489,20 +490,23 @@ export default function AboutPage() {
 
 
                 {/* Statement */}
-                <div className="border-l-4 border-[#F4B400] bg-[#F8FAFC] px-6 py-5 shadow-sm">
-                  <p className="font-bold text-[#0E2748]">
+                <div className="border-l-4 border-[#F4B400] bg-[#F8FAFC] px-4 py-4 shadow-sm sm:px-6 sm:py-5">
+
+                  <p className="text-sm font-bold text-[#0E2748] sm:text-base">
                     From Foundation to Finish
                   </p>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-xs text-slate-500 sm:text-sm">
                     Dependable construction solutions with professional
                     execution at every stage.
                   </p>
+
                 </div>
 
               </motion.div>
 
             </div>
+
           </div>
         </section>
 
@@ -511,13 +515,13 @@ export default function AboutPage() {
         {/* SERVICES */}
         {/* ========================================================= */}
 
-        <section className="relative overflow-hidden bg-[#F8FAFC] py-24 lg:py-32">
+        <section className="relative overflow-hidden bg-[#F8FAFC] py-12 sm:py-20 lg:py-32">
 
           <div className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-[#114FA7]/[0.04] blur-3xl" />
 
           <div className="pointer-events-none absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-[#F4B400]/[0.035] blur-3xl" />
 
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
             {/* Header */}
             <motion.div
@@ -529,21 +533,21 @@ export default function AboutPage() {
             >
 
               <div className="flex items-center gap-3">
-                <span className="h-[2px] w-10 bg-[#F4B400]" />
+                <span className="h-[2px] w-9 bg-[#F4B400] sm:w-10" />
 
-                <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#114FA7]">
+                <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#114FA7] sm:text-xs sm:tracking-[0.3em]">
                   Our Expertise
                 </span>
               </div>
 
-              <h2 className="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tight text-[#0E2748] sm:text-5xl">
+              <h2 className="mt-4 text-3xl font-extrabold leading-[1.05] tracking-tight text-[#0E2748] sm:mt-5 sm:text-5xl">
                 Complete Construction
                 <span className="block text-[#114FA7]">
                   Solutions.
                 </span>
               </h2>
 
-              <p className="mt-5 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg sm:leading-8">
+              <p className="mt-4 max-w-2xl text-sm leading-6 text-slate-500 sm:mt-5 sm:text-lg sm:leading-8">
                 From core construction to finishing and renovation,
                 our services cover the key stages of a project.
               </p>
@@ -551,8 +555,8 @@ export default function AboutPage() {
             </motion.div>
 
 
-            {/* 5 EQUAL CARDS */}
-            <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            {/* 2 COLUMN MOBILE / 5 COLUMN DESKTOP */}
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 lg:grid-cols-5">
 
               {services.map((service, index) => {
                 const Icon = service.icon;
@@ -580,46 +584,51 @@ export default function AboutPage() {
                     className="group relative"
                   >
 
-                    <div className="relative flex min-h-[410px] h-full flex-col overflow-hidden border border-slate-200 bg-white p-7 shadow-[0_10px_35px_rgba(14,39,72,0.045)] transition-all duration-500 hover:-translate-y-3 hover:border-[#114FA7]/20 hover:shadow-[0_25px_60px_rgba(14,39,72,0.14)]">
+                    <div className="relative flex min-h-[255px] h-full flex-col overflow-hidden border border-slate-200 bg-white p-4 shadow-[0_10px_35px_rgba(14,39,72,0.045)] transition-all duration-500 hover:-translate-y-3 hover:border-[#114FA7]/20 hover:shadow-[0_25px_60px_rgba(14,39,72,0.14)] sm:min-h-[350px] sm:p-6 lg:min-h-[410px] lg:p-7">
 
                       {/* Gold top line */}
                       <div className="absolute left-0 right-0 top-0 h-[3px] origin-left scale-x-0 bg-[#F4B400] transition-transform duration-500 group-hover:scale-x-100" />
 
                       {/* Number */}
-                      <span className="pointer-events-none absolute right-4 top-2 text-6xl font-extrabold text-[#0E2748]/[0.035] transition-all duration-500 group-hover:scale-110 group-hover:text-[#114FA7]/[0.07]">
+                      <span className="pointer-events-none absolute right-3 top-2 text-4xl font-extrabold text-[#0E2748]/[0.035] transition-all duration-500 group-hover:scale-110 group-hover:text-[#114FA7]/[0.07] sm:right-4 sm:text-6xl">
                         {service.number}
                       </span>
 
+
                       {/* Icon */}
-                      <div className="relative flex h-14 w-14 shrink-0 items-center justify-center bg-[#114FA7]/[0.07] text-[#114FA7] transition-all duration-500 group-hover:bg-[#114FA7] group-hover:text-white group-hover:shadow-[0_12px_28px_rgba(17,79,167,0.24)]">
+                      <div className="relative flex h-10 w-10 shrink-0 items-center justify-center bg-[#114FA7]/[0.07] text-[#114FA7] transition-all duration-500 group-hover:bg-[#114FA7] group-hover:text-white group-hover:shadow-[0_12px_28px_rgba(17,79,167,0.24)] sm:h-12 sm:w-12 lg:h-14 lg:w-14">
 
                         <Icon
-                          size={25}
+                          size={19}
                           strokeWidth={1.7}
-                          className="transition-transform duration-500 group-hover:scale-110"
+                          className="transition-transform duration-500 group-hover:scale-110 sm:size-[22px] lg:size-[25px]"
                         />
 
-                        <span className="absolute bottom-0 left-0 h-1.5 w-1.5 bg-[#F4B400]" />
+                        <span className="absolute bottom-0 left-0 h-1 w-1 bg-[#F4B400] sm:h-1.5 sm:w-1.5" />
 
                       </div>
 
-                      <p className="mt-7 text-[10px] font-bold uppercase tracking-[0.25em] text-[#114FA7]">
+
+                      <p className="mt-4 text-[8px] font-bold uppercase tracking-[0.18em] text-[#114FA7] sm:mt-6 sm:text-[10px] sm:tracking-[0.25em]">
                         Service {service.number}
                       </p>
 
-                      {/* Larger title */}
-                      <h3 className="mt-3 text-[22px] font-bold leading-tight tracking-tight text-[#0E2748] transition-colors duration-300 group-hover:text-[#114FA7]">
+
+                      {/* Title */}
+                      <h3 className="mt-2 text-[15px] font-bold leading-tight tracking-tight text-[#0E2748] transition-colors duration-300 group-hover:text-[#114FA7] sm:mt-3 sm:text-[19px] lg:text-[22px]">
                         {service.title}
                       </h3>
 
+
                       {/* Description */}
-                      <p className="mt-4 text-sm leading-7 text-slate-500">
+                      <p className="mt-3 text-[10px] leading-5 text-slate-500 sm:mt-4 sm:text-sm sm:leading-6 lg:leading-7">
                         {service.description}
                       </p>
 
+
                       {/* Bottom */}
-                      <div className="mt-auto pt-7">
-                        <div className="h-[2px] w-8 bg-[#F4B400] transition-all duration-500 group-hover:w-14" />
+                      <div className="mt-auto pt-4 sm:pt-6 lg:pt-7">
+                        <div className="h-[2px] w-7 bg-[#F4B400] transition-all duration-500 group-hover:w-12 sm:w-8 sm:group-hover:w-14" />
                       </div>
 
                     </div>
@@ -638,11 +647,11 @@ export default function AboutPage() {
         {/* PROJECT TIMELINE */}
         {/* ========================================================= */}
 
-        <section className="relative overflow-hidden bg-white py-24 lg:py-32">
+        <section className="relative overflow-hidden bg-white py-12 sm:py-20 lg:py-32">
 
           <div className="pointer-events-none absolute left-1/2 top-20 h-96 w-96 -translate-x-1/2 rounded-full bg-[#114FA7]/[0.025] blur-3xl" />
 
-          <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 
             {/* Header */}
             <motion.div
@@ -653,24 +662,24 @@ export default function AboutPage() {
               className="mx-auto max-w-3xl text-center"
             >
 
-              <div className="mb-5 flex items-center justify-center gap-3">
-                <span className="h-[2px] w-10 bg-[#F4B400]" />
+              <div className="mb-4 flex items-center justify-center gap-3 sm:mb-5">
+                <span className="h-[2px] w-8 bg-[#F4B400] sm:w-10" />
 
-                <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#114FA7]">
+                <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#114FA7] sm:text-xs sm:tracking-[0.3em]">
                   Project Journey
                 </span>
 
-                <span className="h-[2px] w-10 bg-[#F4B400]" />
+                <span className="h-[2px] w-8 bg-[#F4B400] sm:w-10" />
               </div>
 
-              <h2 className="text-4xl font-extrabold tracking-tight text-[#0E2748] sm:text-5xl">
+              <h2 className="text-3xl font-extrabold tracking-tight text-[#0E2748] sm:text-5xl">
                 From Planning
                 <span className="text-[#114FA7]">
                   {" "}to Completion.
                 </span>
               </h2>
 
-              <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg">
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-500 sm:mt-5 sm:text-lg sm:leading-7">
                 A structured approach helps us maintain quality,
                 coordination, and professionalism throughout every
                 stage of the project.
@@ -680,10 +689,10 @@ export default function AboutPage() {
 
 
             {/* Timeline */}
-            <div className="relative mt-16">
+            <div className="relative mt-10 sm:mt-14">
 
               {/* Base line */}
-              <div className="absolute bottom-0 left-6 top-0 w-[2px] bg-slate-200 md:left-1/2 md:-translate-x-1/2" />
+              <div className="absolute bottom-0 left-5 top-0 w-[2px] bg-slate-200 sm:left-6 md:left-1/2 md:-translate-x-1/2" />
 
               {/* Animated line */}
               <motion.div
@@ -697,11 +706,11 @@ export default function AboutPage() {
                 style={{
                   transformOrigin: "top",
                 }}
-                className="absolute bottom-0 left-6 top-0 w-[3px] bg-gradient-to-b from-[#F4B400] via-[#114FA7] to-[#114FA7] md:left-1/2 md:-translate-x-1/2"
+                className="absolute bottom-0 left-5 top-0 w-[3px] bg-gradient-to-b from-[#F4B400] via-[#114FA7] to-[#114FA7] sm:left-6 md:left-1/2 md:-translate-x-1/2"
               />
 
 
-              <div className="space-y-12 md:space-y-16">
+              <div className="space-y-7 sm:space-y-12 md:space-y-16">
 
                 {timeline.map((item, index) => {
                   const Icon = item.icon;
@@ -739,7 +748,7 @@ export default function AboutPage() {
                           duration: 0.5,
                           delay: 0.2,
                         }}
-                        className="absolute left-6 top-6 z-20 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full border-4 border-white bg-[#F4B400] shadow-[0_0_0_5px_rgba(244,180,0,0.10),0_5px_15px_rgba(244,180,0,0.25)] md:left-1/2"
+                        className="absolute left-5 top-5 z-20 flex h-5 w-5 -translate-x-1/2 items-center justify-center rounded-full border-4 border-white bg-[#F4B400] shadow-[0_0_0_5px_rgba(244,180,0,0.10),0_5px_15px_rgba(244,180,0,0.25)] sm:left-6 sm:h-6 sm:w-6 md:left-1/2"
                       >
                         <span className="h-1.5 w-1.5 rounded-full bg-[#0E2748]" />
                       </motion.div>
@@ -747,35 +756,41 @@ export default function AboutPage() {
 
                       {/* Card */}
                       <div
-                        className={`ml-14 md:ml-0 ${
+                        className={`ml-10 md:ml-0 ${
                           isRight
                             ? "md:col-start-2"
                             : "md:col-start-1"
                         }`}
                       >
 
-                        <div className="group relative overflow-hidden border border-slate-200 bg-white p-7 shadow-[0_10px_35px_rgba(14,39,72,0.05)] transition-all duration-500 hover:-translate-y-2 hover:border-[#114FA7]/20 hover:shadow-[0_25px_55px_rgba(14,39,72,0.13)]">
+                        <div className="group relative overflow-hidden border border-slate-200 bg-white p-4 shadow-[0_10px_35px_rgba(14,39,72,0.05)] transition-all duration-500 hover:-translate-y-2 hover:border-[#114FA7]/20 hover:shadow-[0_25px_55px_rgba(14,39,72,0.13)] sm:p-6 md:p-7">
 
                           {/* Hover line */}
                           <div className="absolute left-0 top-0 h-full w-1 origin-top scale-y-0 bg-[#F4B400] transition-transform duration-500 group-hover:scale-y-100" />
 
-                          <div className="flex items-start justify-between gap-5">
+                          <div className="flex items-start justify-between gap-3 sm:gap-5">
 
-                            <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-[#114FA7]/[0.07] text-[#114FA7] transition-all duration-500 group-hover:scale-105 group-hover:bg-[#114FA7] group-hover:text-white group-hover:shadow-[0_10px_25px_rgba(17,79,167,0.20)]">
-                              <Icon size={22} />
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#114FA7]/[0.07] text-[#114FA7] transition-all duration-500 group-hover:scale-105 group-hover:bg-[#114FA7] group-hover:text-white group-hover:shadow-[0_10px_25px_rgba(17,79,167,0.20)] sm:h-12 sm:w-12">
+
+                              <Icon
+                                size={19}
+                                className="sm:size-[22px]"
+                              />
+
                             </div>
 
-                            <span className="text-5xl font-extrabold leading-none text-[#0E2748]/[0.045] transition-colors duration-500 group-hover:text-[#114FA7]/[0.08]">
+                            <span className="text-4xl font-extrabold leading-none text-[#0E2748]/[0.045] transition-colors duration-500 group-hover:text-[#114FA7]/[0.08] sm:text-5xl">
                               {item.number}
                             </span>
 
                           </div>
 
-                          <h3 className="mt-6 text-xl font-bold text-[#0E2748] transition-colors duration-300 group-hover:text-[#114FA7]">
+
+                          <h3 className="mt-4 text-base font-bold leading-tight text-[#0E2748] transition-colors duration-300 group-hover:text-[#114FA7] sm:mt-6 sm:text-xl">
                             {item.title}
                           </h3>
 
-                          <p className="mt-3 text-sm leading-7 text-slate-500">
+                          <p className="mt-2 text-xs leading-5 text-slate-500 sm:mt-3 sm:text-sm sm:leading-7">
                             {item.description}
                           </p>
 
@@ -788,6 +803,7 @@ export default function AboutPage() {
                 })}
 
               </div>
+
             </div>
 
           </div>
@@ -798,7 +814,7 @@ export default function AboutPage() {
         {/* WHY CHOOSE US */}
         {/* ========================================================= */}
 
-        <section className="relative overflow-hidden bg-[#0E2748] py-24 lg:py-32">
+        <section className="relative overflow-hidden bg-[#0E2748] py-12 sm:py-20 lg:py-32">
 
           {/* Background glow */}
           <motion.div
@@ -827,9 +843,9 @@ export default function AboutPage() {
             className="pointer-events-none absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full bg-[#F4B400] blur-3xl"
           />
 
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-            <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-24">
+            <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-24">
 
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -839,21 +855,21 @@ export default function AboutPage() {
               >
 
                 <div className="flex items-center gap-3">
-                  <span className="h-[2px] w-10 bg-[#F4B400]" />
+                  <span className="h-[2px] w-9 bg-[#F4B400] sm:w-10" />
 
-                  <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#F4B400]">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#F4B400] sm:text-xs sm:tracking-[0.3em]">
                     Why Choose Us
                   </span>
                 </div>
 
-                <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+                <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
                   Quality,
                   <span className="block text-[#F4B400]">
                     Reliability & Excellence.
                   </span>
                 </h2>
 
-                <p className="mt-6 max-w-xl text-base leading-8 text-white/60 sm:text-lg">
+                <p className="mt-5 max-w-xl text-sm leading-6 text-white/60 sm:mt-6 sm:text-lg sm:leading-8">
                   Our focus on client satisfaction, quality
                   workmanship, and timely execution has helped us
                   build lasting professional relationships.
@@ -862,7 +878,7 @@ export default function AboutPage() {
               </motion.div>
 
 
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid grid-cols-2 gap-2 sm:gap-4">
 
                 {values.map((item, index) => {
                   const Icon = item.icon;
@@ -886,7 +902,7 @@ export default function AboutPage() {
                         duration: 0.55,
                         delay: index * 0.08,
                       }}
-                      className="group relative overflow-hidden border border-white/10 bg-white/[0.045] p-7 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#F4B400]/30 hover:bg-white/[0.08] hover:shadow-[0_25px_60px_rgba(0,0,0,0.25)]"
+                      className="group relative overflow-hidden border border-white/10 bg-white/[0.045] p-4 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#F4B400]/30 hover:bg-white/[0.08] hover:shadow-[0_25px_60px_rgba(0,0,0,0.25)] sm:p-6 lg:p-7"
                     >
 
                       {/* Gold top shine */}
@@ -895,15 +911,21 @@ export default function AboutPage() {
                       {/* Glow */}
                       <div className="pointer-events-none absolute -right-12 -top-12 h-24 w-24 rounded-full bg-[#114FA7]/20 blur-2xl transition-transform duration-700 group-hover:scale-150" />
 
-                      <div className="relative flex h-12 w-12 items-center justify-center bg-white/[0.08] text-[#F4B400] transition-all duration-500 group-hover:scale-105 group-hover:bg-[#F4B400] group-hover:text-[#0E2748]">
-                        <Icon size={23} />
+
+                      <div className="relative flex h-9 w-9 items-center justify-center bg-white/[0.08] text-[#F4B400] transition-all duration-500 group-hover:scale-105 group-hover:bg-[#F4B400] group-hover:text-[#0E2748] sm:h-12 sm:w-12">
+
+                        <Icon
+                          size={18}
+                          className="sm:size-[23px]"
+                        />
+
                       </div>
 
-                      <h3 className="relative mt-6 text-lg font-bold text-white">
+                      <h3 className="relative mt-4 text-sm font-bold leading-tight text-white sm:mt-6 sm:text-lg">
                         {item.title}
                       </h3>
 
-                      <p className="relative mt-3 text-sm leading-6 text-white/50">
+                      <p className="relative mt-2 text-[10px] leading-5 text-white/50 sm:mt-3 sm:text-sm sm:leading-6">
                         {item.description}
                       </p>
 
@@ -914,6 +936,7 @@ export default function AboutPage() {
               </div>
 
             </div>
+
           </div>
         </section>
 
@@ -922,7 +945,7 @@ export default function AboutPage() {
         {/* FINAL CTA */}
         {/* ========================================================= */}
 
-        <section className="relative overflow-hidden bg-white py-24 lg:py-28">
+        <section className="relative overflow-hidden bg-white py-12 sm:py-20 lg:py-28">
 
           <div className="pointer-events-none absolute left-1/2 top-0 h-80 w-80 -translate-x-1/2 rounded-full bg-[#114FA7]/[0.035] blur-3xl" />
 
@@ -942,29 +965,31 @@ export default function AboutPage() {
             transition={{
               duration: 0.7,
             }}
-            className="relative mx-auto max-w-5xl px-6 text-center lg:px-8"
+            className="relative mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8"
           >
 
-            <div className="flex items-center justify-center gap-3">
+            <div className="flex items-center justify-center gap-2 sm:gap-3">
 
-              <span className="h-[2px] w-10 bg-[#F4B400]" />
+              <span className="h-[2px] w-8 bg-[#F4B400] sm:w-10" />
 
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#114FA7]">
+              <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#114FA7] sm:text-xs sm:tracking-[0.3em]">
                 Let&apos;s Build Together
               </span>
 
-              <span className="h-[2px] w-10 bg-[#F4B400]" />
+              <span className="h-[2px] w-8 bg-[#F4B400] sm:w-10" />
 
             </div>
 
-            <h2 className="mt-6 text-4xl font-extrabold tracking-tight text-[#0E2748] sm:text-5xl lg:text-6xl">
+
+            <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-[#0E2748] sm:mt-6 sm:text-5xl lg:text-6xl">
               Let&apos;s Build Something
               <span className="block text-[#114FA7]">
                 Exceptional Together.
               </span>
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg sm:leading-8">
+
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-slate-500 sm:mt-6 sm:text-lg sm:leading-8">
               Whether you&apos;re planning a residential, commercial,
               industrial, or turnkey project, Shriman Buildcon is
               committed to delivering quality construction solutions
@@ -973,11 +998,11 @@ export default function AboutPage() {
 
 
             {/* CTA */}
-            <div className="mt-9 flex justify-center">
+            <div className="mt-7 flex justify-center sm:mt-9">
 
               <Link
                 href="/contact"
-                className="group relative inline-flex items-center gap-3 overflow-hidden bg-[#114FA7] px-8 py-4 font-bold text-white shadow-[0_15px_35px_rgba(17,79,167,0.20)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0E438F] hover:shadow-[0_20px_45px_rgba(17,79,167,0.28)]"
+                className="group relative inline-flex items-center gap-2 overflow-hidden bg-[#114FA7] px-6 py-3.5 text-sm font-bold text-white shadow-[0_15px_35px_rgba(17,79,167,0.20)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0E438F] hover:shadow-[0_20px_45px_rgba(17,79,167,0.28)] sm:gap-3 sm:px-8 sm:py-4"
               >
 
                 {/* Shine */}
@@ -987,11 +1012,13 @@ export default function AboutPage() {
                   Start Your Project
                 </span>
 
-                <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-white/10 transition-all duration-300 group-hover:bg-white/20">
+                <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-white/10 transition-all duration-300 group-hover:bg-white/20 sm:h-7 sm:w-7">
+
                   <ArrowRight
-                    size={17}
+                    size={15}
                     className="transition-transform duration-300 group-hover:translate-x-1"
                   />
+
                 </span>
 
               </Link>

@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowUpRight, MapPin } from "lucide-react";
 import Link from "next/link";
+import { ArrowUpRight, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -49,37 +49,38 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="relative overflow-hidden bg-white py-24 lg:py-32">
-      {/* Soft background decoration */}
-      <div className="pointer-events-none absolute -right-32 top-20 h-96 w-96 rounded-full bg-[#114FA7]/[0.035] blur-3xl" />
-      <div className="pointer-events-none absolute -left-32 bottom-20 h-96 w-96 rounded-full bg-[#F4B400]/[0.035] blur-3xl" />
+    <section className="relative overflow-hidden bg-white py-8 sm:py-20 lg:py-28">
+      {/* Background decoration */}
+      <div className="pointer-events-none absolute -right-32 top-20 hidden h-96 w-96 rounded-full bg-[#114FA7]/[0.035] blur-3xl sm:block" />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="pointer-events-none absolute -left-32 bottom-20 hidden h-96 w-96 rounded-full bg-[#F4B400]/[0.035] blur-3xl sm:block" />
 
-        {/* ============================= */}
+      <div className="relative mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
+
+        {/* ====================================================== */}
         {/* SECTION HEADER */}
-        {/* ============================= */}
+        {/* ====================================================== */}
 
         <motion.div
-          initial={{ opacity: 0, y: 35 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7 }}
-          className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end"
+          transition={{ duration: 0.6 }}
+          className="flex flex-col justify-between gap-3 sm:gap-8 lg:flex-row lg:items-end"
         >
           <div className="max-w-3xl">
 
             {/* Label */}
-            <div className="mb-5 flex items-center gap-3">
-              <div className="h-[2px] w-12 bg-[#F4B400]" />
+            <div className="mb-2 flex items-center gap-2 sm:mb-5 sm:gap-3">
+              <div className="h-[2px] w-7 bg-[#F4B400] sm:w-12" />
 
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#114FA7] sm:text-sm">
+              <span className="text-[8px] font-bold uppercase tracking-[0.22em] text-[#114FA7] sm:text-xs sm:tracking-[0.3em]">
                 Our Projects
               </span>
             </div>
 
             {/* Heading */}
-            <h2 className="text-4xl font-extrabold leading-[1.08] tracking-tight text-[#0E2748] sm:text-5xl lg:text-[54px]">
+            <h2 className="text-[25px] font-extrabold leading-[1.05] tracking-tight text-[#0E2748] sm:text-5xl lg:text-[54px]">
               Work That Speaks
               <span className="block text-[#114FA7]">
                 For Itself
@@ -87,20 +88,20 @@ export default function Projects() {
             </h2>
 
             {/* Accent */}
-            <div className="mt-5 h-1 w-16 bg-[#F4B400]" />
+            <div className="mt-2 h-[3px] w-10 bg-[#F4B400] sm:mt-5 sm:h-1 sm:w-16" />
 
             {/* Description */}
-            <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
+            <p className="mt-2 max-w-2xl text-[11px] leading-[1.45] text-slate-600 sm:mt-6 sm:text-base sm:leading-7 lg:text-lg lg:leading-8">
               Explore selected projects that demonstrate our commitment
               to quality, precision, and professional construction
               execution.
             </p>
           </div>
 
-          {/* View All Projects */}
+          {/* Desktop View All */}
           <Link
             href="/projects"
-            className="group inline-flex shrink-0 items-center gap-3 border-b-2 border-[#114FA7]/20 pb-2 text-sm font-bold text-[#114FA7] transition-all duration-300 hover:border-[#F4B400] hover:text-[#0E2748]"
+            className="group hidden shrink-0 items-center gap-3 border-b-2 border-[#114FA7]/20 pb-2 text-sm font-bold text-[#114FA7] transition-all duration-300 hover:border-[#F4B400] hover:text-[#0E2748] lg:inline-flex"
           >
             View All Projects
 
@@ -113,149 +114,298 @@ export default function Projects() {
           </Link>
         </motion.div>
 
-        {/* ============================= */}
+        {/* ====================================================== */}
         {/* PROJECT GRID */}
-        {/* ============================= */}
+        {/* ====================================================== */}
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          className="
+            mt-5
+            grid
+            grid-cols-2
+            gap-2
 
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.slug}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{
-                duration: 0.65,
-                delay: index * 0.08,
-                ease: "easeOut",
-              }}
-              className={`${
-                index === 0
-                  ? "md:col-span-2 lg:col-span-2"
-                  : ""
-              }`}
-            >
+            sm:mt-12
+            sm:grid-cols-2
+            sm:gap-5
 
-              {/* CLICKABLE PROJECT CARD */}
-              <Link
-                href={`/projects#${project.slug}`}
-                className="group relative block overflow-hidden bg-[#0E2748] shadow-[0_15px_45px_rgba(14,39,72,0.10)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_65px_rgba(14,39,72,0.22)]"
+            lg:mt-14
+            lg:grid-cols-3
+            lg:gap-6
+          "
+        >
+          {projects.map((project, index) => {
+            return (
+              <motion.div
+                key={project.slug}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{
+                  duration: 0.55,
+                  delay: index * 0.05,
+                  ease: "easeOut",
+                }}
+                className="col-span-1"
               >
+                <Link
+                  href={`/projects#${project.slug}`}
+                  className="
+                    group
+                    relative
+                    block
+                    overflow-hidden
+                    bg-[#0E2748]
+                    shadow-[0_8px_25px_rgba(14,39,72,0.09)]
+                    transition-all
+                    duration-500
+                    hover:-translate-y-1
+                    hover:shadow-[0_20px_50px_rgba(14,39,72,0.18)]
+                  "
+                >
+                  {/* ================================================== */}
+                  {/* IMAGE */}
+                  {/* ================================================== */}
 
-                {/* Image */}
-                <div
-  className={`relative overflow-hidden ${
-    index === 0
-      ? "aspect-[16/8] lg:h-[500px] lg:aspect-auto"
-      : index === 1
-      ? "aspect-[4/3] lg:h-[500px] lg:aspect-auto"
-      : "aspect-[4/3]"
-  }`}
->
+                  <div
+                    className="
+                      relative
+                      aspect-[1.18/1]
+                      overflow-hidden
 
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
-                  />
+                      sm:aspect-[4/3]
 
-                  {/* Main dark gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0E2748] via-[#0E2748]/30 to-transparent transition-all duration-500 group-hover:from-[#0E2748]/95 group-hover:via-[#0E2748]/35" />
+                      lg:aspect-[4/3]
+                    "
+                  >
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="
+                        h-full
+                        w-full
+                        object-cover
+                        transition-transform
+                        duration-1000
+                        ease-out
+                        group-hover:scale-105
+                      "
+                    />
 
-                  {/* Blue hover overlay */}
-                  <div className="absolute inset-0 bg-[#114FA7]/0 transition-all duration-500 group-hover:bg-[#114FA7]/15" />
+                    {/* Dark gradient */}
+                    <div
+                      className="
+                        absolute
+                        inset-0
+                        bg-gradient-to-t
+                        from-[#0E2748]
+                        via-[#0E2748]/35
+                        to-transparent
+                        transition-all
+                        duration-500
+                        group-hover:from-[#0E2748]/95
+                        group-hover:via-[#0E2748]/40
+                      "
+                    />
 
-                  {/* Subtle shine */}
-                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/[0.08] to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
+                    {/* Blue hover */}
+                    <div className="absolute inset-0 bg-[#114FA7]/0 transition-all duration-500 group-hover:bg-[#114FA7]/10" />
 
-                  {/* Category */}
-                  <div className="absolute left-5 top-5">
-                    <span className="inline-flex items-center border border-white/20 bg-[#0E2748]/75 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.15em] text-white backdrop-blur-md transition-all duration-300 group-hover:border-[#F4B400] group-hover:bg-[#F4B400] group-hover:text-[#0E2748]">
-                      {project.category}
-                    </span>
-                  </div>
+                    {/* ================================================== */}
+                    {/* CATEGORY */}
+                    {/* ================================================== */}
 
-                  {/* Project Number */}
-                  <span className="absolute right-5 top-5 text-5xl font-black leading-none text-white/[0.10] transition-all duration-500 group-hover:text-white/[0.20]">
-                    0{index + 1}
-                  </span>
+                    <div className="absolute left-2 top-2 sm:left-5 sm:top-5">
+                      <span
+                        className="
+                          inline-flex
+                          max-w-[105px]
+                          border
+                          border-white/20
+                          bg-[#0E2748]/70
+                          px-1.5
+                          py-0.5
+                          text-[6px]
+                          font-bold
+                          uppercase
+                          tracking-[0.1em]
+                          text-white
+                          backdrop-blur-md
 
-                  {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
-
-                    <div className="flex items-end justify-between gap-5">
-
-                      <div className="min-w-0">
-
-                        {/* Title */}
-                        <h3
-                          className={`font-extrabold leading-tight text-white ${
-                            index === 0
-                              ? "text-2xl sm:text-3xl"
-                              : "text-xl sm:text-2xl"
-                          }`}
-                        >
-                          {project.title}
-                        </h3>
-
-                        {/* Location */}
-                        <div className="mt-3 flex items-center gap-2 text-sm text-white/75">
-                          <MapPin
-                            size={15}
-                            className="shrink-0 text-[#F4B400]"
-                          />
-
-                          <span>{project.location}</span>
-                        </div>
-
-                      </div>
-
-                      {/* Animated Arrow */}
-                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#0E2748] shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:bg-[#F4B400] group-hover:shadow-[0_10px_30px_rgba(244,180,0,0.35)]">
-                        <ArrowUpRight
-                          size={20}
-                          className="transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1"
-                        />
+                          sm:max-w-none
+                          sm:px-3
+                          sm:py-2
+                          sm:text-[10px]
+                          sm:tracking-[0.15em]
+                        "
+                      >
+                        {project.category}
                       </span>
-
                     </div>
 
-                    {/* Gold hover line */}
-                    <div className="mt-5 h-[2px] w-0 bg-[#F4B400] transition-all duration-700 group-hover:w-full" />
+                    {/* Project number */}
+                    <span
+                      className="
+                        absolute
+                        right-2
+                        top-2
+                        text-2xl
+                        font-black
+                        leading-none
+                        text-white/[0.10]
+                        transition-all
+                        duration-500
+                        group-hover:text-white/[0.18]
 
+                        sm:right-5
+                        sm:top-5
+                        sm:text-5xl
+                      "
+                    >
+                      0{index + 1}
+                    </span>
+
+                    {/* ================================================== */}
+                    {/* CONTENT */}
+                    {/* ================================================== */}
+
+                    <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-6 lg:p-7">
+                      <div className="flex items-end justify-between gap-1 sm:gap-5">
+
+                        <div className="min-w-0">
+
+                          {/* Title */}
+                          <h3
+                            className="
+                              font-extrabold
+                              leading-[1.08]
+                              text-white
+                              text-[11px]
+
+                              sm:text-2xl
+
+                              lg:text-[27px]
+                            "
+                          >
+                            {project.title}
+                          </h3>
+
+                          {/* Location */}
+                          <div className="mt-1 flex items-center gap-1 text-[7px] text-white/75 sm:mt-3 sm:gap-2 sm:text-sm">
+                            <MapPin
+                              size={9}
+                              className="shrink-0 text-[#F4B400] sm:h-[15px] sm:w-[15px]"
+                            />
+
+                            <span>
+                              {project.location}
+                            </span>
+                          </div>
+
+                        </div>
+
+                        {/* Arrow */}
+                        <span
+                          className="
+                            flex
+                            h-6
+                            w-6
+                            shrink-0
+                            items-center
+                            justify-center
+                            rounded-full
+                            bg-white
+                            text-[#0E2748]
+                            shadow-lg
+                            transition-all
+                            duration-500
+                            group-hover:scale-110
+                            group-hover:bg-[#F4B400]
+
+                            sm:h-12
+                            sm:w-12
+                          "
+                        >
+                          <ArrowUpRight
+                            size={12}
+                            className="
+                              transition-transform
+                              duration-500
+                              group-hover:-translate-y-0.5
+                              group-hover:translate-x-0.5
+
+                              sm:h-5
+                              sm:w-5
+                            "
+                          />
+                        </span>
+                      </div>
+
+                      {/* Gold line */}
+                      <div
+                        className="
+                          mt-1.5
+                          h-[2px]
+                          w-0
+                          bg-[#F4B400]
+                          transition-all
+                          duration-700
+                          group-hover:w-full
+
+                          sm:mt-5
+                        "
+                      />
+                    </div>
                   </div>
-                </div>
 
-                {/* Bottom border */}
-                <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#F4B400] transition-all duration-700 group-hover:w-full" />
-
-              </Link>
-            </motion.div>
-          ))}
-
+                  {/* Bottom accent */}
+                  <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#F4B400] transition-all duration-700 group-hover:w-full" />
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
 
-        {/* ============================= */}
+        {/* ====================================================== */}
         {/* MOBILE VIEW ALL */}
-        {/* ============================= */}
+        {/* ====================================================== */}
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-10 flex justify-center lg:hidden"
+          transition={{ duration: 0.5 }}
+          className="mt-4 flex justify-center lg:hidden"
         >
           <Link
             href="/projects"
-            className="group flex items-center gap-3 bg-[#0E2748] px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#114FA7] hover:shadow-xl"
+            className="
+              group
+              flex
+              items-center
+              gap-2
+              bg-[#0E2748]
+              px-4
+              py-2.5
+              text-[10px]
+              font-bold
+              text-white
+              shadow-lg
+              transition-all
+              duration-300
+              hover:bg-[#114FA7]
+
+              sm:gap-3
+              sm:px-6
+              sm:py-3.5
+              sm:text-sm
+            "
           >
             View All Projects
 
             <ArrowUpRight
-              size={17}
-              className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              size={13}
+              className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 sm:h-[17px] sm:w-[17px]"
             />
           </Link>
         </motion.div>
