@@ -16,9 +16,36 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Shriman Buildcon",
   description:
-    "Professional construction, turnkey projects, waterproofing, tile and stone fixing, renovation and finishing services.",
+    "Professional construction, waterproofing, tile and stone fixing, renovation and finishing services.",
+
   icons: {
     icon: "/icon.png",
+  },
+
+  openGraph: {
+    title: "Shriman Buildcon",
+    description:
+      "Professional construction, waterproofing, tile and stone fixing, renovation and finishing services.",
+    url: "https://shrimanbuildcon.com",
+    siteName: "Shriman Buildcon",
+    images: [
+      {
+        url: "https://shrimanbuildcon.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Shriman Buildcon",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Shriman Buildcon",
+    description:
+      "Professional construction, waterproofing, tile and stone fixing, renovation and finishing services.",
+    images: ["https://shrimanbuildcon.com/og-image.png"],
   },
 };
 
@@ -40,7 +67,7 @@ export default function RootLayout({
               url: "https://shrimanbuildcon.com",
               logo: "https://shrimanbuildcon.com/icon.png",
               description:
-                "Professional construction, turnkey projects, waterproofing, tile and stone fixing, renovation and finishing services.",
+                "Professional construction, waterproofing, tile and stone fixing, renovation and finishing services.",
             }),
           }}
         />
